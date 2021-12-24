@@ -1,3 +1,4 @@
-# Sizing-and-Scheduling-PV-Battery
+# SIZING AND SCHEDULING SOLAR PHOTOVOLTAIC BATTERY SYSTEMS FOR PEAK ELECTRICAL DEMAND MANAGEMENT 
 
-Contact: hssharadga@tamu.edu
+Contact: Hussein Sharadga
+hssharadga@tamu.edu
