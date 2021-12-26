@@ -6,7 +6,7 @@ This reserch was conducted at TFCL Reserch Lab (Dr. Bryan Rasmussen) at Texas A&
 
 
 
-Authors: Hussein Sharadga(hssharadga@tamu.edu) and Dr. Bryan Rasmussen.
+Authors: Hussein Sharadga and Dr. Bryan Rasmussen.
 
 
-Note: If you are facing an issue running the codes, please feel free to drop me an Email, LinkedIn message, ResearchGate message, or GitHub
+Note: If you are facing an issue running the codes, please feel free to drop me an Email (hssharadga@tamu.edu), LinkedIn message, ResearchGate message, or GitHub
