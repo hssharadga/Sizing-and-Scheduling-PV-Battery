@@ -1,7 +1,7 @@
 # Sizing and Scheduling Solar Photovoltaic Battery System For Demand Peak Shaving (15-minute monthly demand peak)
 
 This reserch was conducted at TFCL Reserch Lab (Dr. Bryan Rasmussen) at Texas A&M University, USA.
-
+https://engineering.tamu.edu/mechanical/profiles/rasmussen-bryan.html
 
 
 
