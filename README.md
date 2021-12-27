@@ -10,3 +10,9 @@ Authors: Hussein Sharadga and Dr. Bryan Rasmussen.
 
 
 Note: If you are facing an issue running the codes, please feel free to drop me an Email (hssharadga@tamu.edu), LinkedIn message, ResearchGate message, or GitHub
+
+
+% Please support my reserch by cite the following related papers:
+% A)
+% B)
+% C)
