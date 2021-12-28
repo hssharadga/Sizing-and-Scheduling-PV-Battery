@@ -4,7 +4,7 @@ This reserch was conducted at TFCL Reserch Lab (Dr. Bryan Rasmussen) at Texas A&
 https://engineering.tamu.edu/mechanical/profiles/rasmussen-bryan.html
 
 
-
+% To procede, find "main" MATLAB code
 
 Authors: Hussein Sharadga and Dr. Bryan Rasmussen.
 
