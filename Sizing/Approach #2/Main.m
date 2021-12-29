@@ -15,7 +15,7 @@ global rate
 global eta
 rate_max=7; % 7 [$/kW]
 rate=0.05; % 0.05 [$/kWh]
-eta=0.92; % Charging/Discharging Efficiency
+eta=0.92; % Charging/discharging Efficiency
 
 %% Loading and one-time calculations
 Load_Data_Processing; % Load is the the electrical load
