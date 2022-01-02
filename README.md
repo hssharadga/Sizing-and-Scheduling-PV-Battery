@@ -1,10 +1,5 @@
 # Sizing and Scheduling Solar Photovoltaic Battery System For Demand Peak Shaving (15-minute monthly demand peak)
  Authors: Hussein Sharadga(hssharadga@tamu.edu), Dr. Bryan Rasmussen
-
-To procede, find "main" MATLAB code
-
-
-
 Note: If you are facing an issue running the codes, please feel free to drop me an E-mail (hssharadga@tamu.edu), LinkedIn message, ResearchGate message, or GitHub
 
 
@@ -14,4 +9,18 @@ A)
 B)
 C)
 D)
+
+
+
+
+# Sizing Paper
+Approach #2 was used to generate the results of the sizing paper
+Approach #1 can be very slow for some scenarios where a lot of binary vector needs to be optimized.
+
+To procede, find "main" MATLAB code.
+
+
+
+
+
 
