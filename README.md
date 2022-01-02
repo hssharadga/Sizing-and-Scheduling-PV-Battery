@@ -11,9 +11,9 @@ C)
 D)
 
 
+# Info
 
-
-# Sizing Paper
+1)  Sizing Paper
 Approach #2 was used to generate the results of the sizing paper
 Approach #1 can be very slow for some scenarios where a lot of binary vector needs to be optimized.
 
