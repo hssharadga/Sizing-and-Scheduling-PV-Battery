@@ -13,14 +13,15 @@ B)
 C)   
 D)   
    
+# General Info   
+- To procede, find "main" MATLAB code.
    
-# Info
-   
-1)  Sizing Paper
-Approach #2 was used to generate the results of the sizing paper
-Approach #1 is very slow for some scenarios in which a lot of binary vector needs to be optimized.
-   
-To procede, find "main" MATLAB code.
+# Info: Sizing Paper
+
+
+- Approach #2 was used to generate the results of the sizing paper.
+- Approach #1 is very slow for some scenarios in which a lot of binary vector needs to be optimized.
+- Approach #1, scenario #3 with eta<>1: The formulation was not explained for the sake of brevity in the Sizing paper. The full explanation is now drafted in word files and uploaded in Approach #1 Folder.
    
 
 
