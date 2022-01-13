@@ -14,7 +14,7 @@ C)
 D)   
    
 # General Info   
-- To procede, find "main" MATLAB code.
+- To procede, find "Main" MATLAB code.
    
 # Info: Sizing Paper
 
