@@ -1,0 +1,75 @@
+tic;% calacute the time required for simulation
+
+
+global len
+global eta
+global rate_max
+global rate
+global step
+global u
+global maxx
+
+eta=1;
+N=len;
+L = (step/4)*tril(ones(N));% multiply by 0.5 b/c it 30 minutes is 0.5 hour
+
+
+%% Solver selection
+% cvx_solver SDPT3   % academic solver/ Default solver
+cvx_solver MOSEK  % Commerical solver but free for students
+
+
+%% CVX convex optimization
+cvx_begin
+    expression maxx(12)
+    variables Q(N) Cb N_PV
+    E0=Cb; % E0 is the energy sotrd in the battery at t=0   [kwh]
+    Es = E0+L*Q/1000;% E0 is kwh  ( L is 1 hour  Q is watt  L*Q is wh)
+    grid_=Load'+Q-N_PV*PV';
+    grid_=max(grid_,0);% 
+
+  
+    step_=(24*30*4/step);% number of month
+%     step_=24;
+    
+    step_=min(step_,length(grid_));
+    j=1;
+    for i=1:step_:length(grid_)
+        
+        maxx(j)=max(grid_(i:i+step_-1));
+        j=j+1;
+    end
+    
+    LCC=LCC_5_Q(N_PV,Cb,Q)% Life Cycle Cost is function of the sizes ()
+    minimize (sum(grid_*step/4)/(1000)*rate+rate_max*sum(maxx)/1000+LCC/20)
+
+    % grid_ is w mutliply by step/4 which is hr  become wh  then divide by 1000
+% will be kwh (the rate is 1 $/ kwh)
+
+
+    subject to
+
+    % Constraints on the battery
+    Es <= Cb;
+    Es >= 0;
+    %     Es(end)>=0.99*Cap;
+
+    % Constraints on the size
+    N_PV>=0;% The size is nonnegative
+    cb>=0;% The size is nonnegative
+    
+    % Constraints on the size   
+    Q/1000<=0.4*Cb;
+    Q/1000>=-1*Cb;
+    
+    
+ cvx_end
+
+% saving and time display
+time=toc;
+disp(['time = ',num2str(time)])
+
+Q=Q;
+Cb=Cb
+NPV=N_PV
+

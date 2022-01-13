@@ -5,15 +5,16 @@ global len
 global eta
 global rate_max
 global rate
-global Peak_after_matrix
+% global Peak_after_matrix
+eta=1;
 
 N=len;
 step=4;% step = 1 if the load and PV recorded every 15-minute for 15-minute peak shaving
 L = (step/4)*tril(ones(N));% L unit is hr for both hourly peak shaving and 15-minute peak shaving
 
 %% CVX solver selection
-% cvx_solver SDPT3   % Academic Solver/ Default Solver
-cvx_solver MOSEK  % Commercial Solver but free for students, this solver found to be significantly better for the current problem
+% cvx_solver SDPT3   % Academic Solver/ Default Solver, this solver is very slow for this problem
+cvx_solver MOSEK     % Commercial Solver but free for students, this solver found to be significantly better for the current problem
 
 %% CVX convex optimization
 cvx_begin

@@ -3,6 +3,8 @@
 global rate_max
 global rate 
 
+
+
 %% Without Shaving Peaks and bill
 
 step_=(24*30);% Number of hours in one month
@@ -20,7 +22,8 @@ step=4;% step = 1 if the load and PV recorded every 15-minute for 15-minute peak
 Consumption_fees=sum(Load)/1000 *(step/4)*rate % the consumption, the rate is in unit of [$/ kWh], sum(Load)/1000 *(step/4) is in the unit of [kWh]
 Bill_before=Peak_fees+Consumption_fees
 
-%% Plot
+
+%%
 u=Q/1000/Cb;% u is in the unit of [1/hr], Q/1000 = [kW], Cb =[kWh], Q/1000/Cb = [kW]/[kWh]= [1/h]
 Eb = 1000*Cb*max(1/eta*u,eta*u);% Eb is the battery energy [W], Cb in [kwh], u in 1/hr;
 grid_=Load'+Eb-NPV*PV';
@@ -29,12 +32,14 @@ grid_=Load'+Eb-NPV*PV';
 % tt = 0:minutes(30):minutes(24.5*60);
 t=linspace(0,len-1,len);% start at o and end at 7
 figure
+
 tt=t;
 yyaxis left
 plot(tt,grid_/1000,'g--')
 hold on
 plot(tt,-Eb'/1000,'r--')
 plot(tt,Load/1000,'k-')
+
 plot(tt,N_PV*PV/1000,'b--')
 ylabel('Power [kW]');
 yyaxis right
@@ -43,30 +48,32 @@ xlabel ('time [hr]');
 ylabel('Battery capacity (Cb)[kWh]');
 grid on
 LCC_one_year=floor(LCC(NPV,Cb,Q)/20);
-
-bill_amount=floor(cvx_optval-LCC_one_year);% CVX_optval is the optimal solution obtained by CVX Optimization
-                                           % CVX_optval is the electcity cost = bill_amount + Life_cycle_cost of one year
-title(['Bill amount: ', '$ ',num2str(floor(bill_amount)), ' LCC: ', '$ ',num2str(LCC_one_year) ])
+title(['Bill amount: ', '$ ',num2str(floor(cvx_optval)), ' LCC: ', '$ ',num2str(LCC_one_year) ])
 % xtickformat('hh:mm');
 legend('grid contrubtion','battry  contrubtion','Energy Profile','PV power','battery capcity')
 
-%% Saving and others
+%%
 bill_amount=floor(cvx_optval-LCC_one_year);% CVX_optval is the optimal solution obtained by CVX Optimization
-                                           % CVX_optval is the electcity cost = bill_amount + Life_cycle_cost of one year
+                                           % CVX_optval is the electcity cost = bill_amount + Life-cycle_cost of one year
                                           
-shaving=(sum(Peak_before_matrix)-sum(Peak_after_matrix))/1000; % to kW
-shaving_dollar=shaving*rate_max% in $
-step=4;% step = 1 if the load and PV recorded every 15-minute for 15-minute peak shaving
-PV_money=sum(PV)*NPV/1000*step/4*rate; % sum(PV)*NPV/1000*step/4 is in [kWh]
-L_C_C=LCC(NPV,Cb,Q)/20; % in $
 
+shaving=(sum(Peak_before_matrix)-sum(Peak_after_matrix))/1000; % to kw
+shaving_dollar=shaving*rate_max% IN $
+
+PV_money=sum(PV)*NPV/1000*0.05
+L_C_C=LCC(NPV,Cb,Q)/20
 global PV_LCC
-global Cb_LCC
-PV_LCC_=floor(PV_LCC/20);% Life cycle cost of PV
-cb_LCC_=(Cb_LCC/20)
+global cb_LCC
 
-Loss=-(sum(grid_(grid_<0))*step/4/1000)*rate% PV power provided to the gird for free in [kWh]
+PV_LCC_=floor(PV_LCC/20)
+cb_LCC_=(cb_LCC/20)
 
-Electricity_Cost_Reduction_Percentage=(1-(cvx_optval/Bill_before))*100%
+Loss=-(sum(grid_(grid_<0))*step/4/1000)*0.05% PV power provided to the gird for free in kwh
+
+bill2=Bill_before-shaving_dollar-(PV_money-Loss);
+
+% bill_amount-bill2;
+
+
 
 
