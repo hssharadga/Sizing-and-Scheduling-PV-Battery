@@ -85,12 +85,12 @@ end
 %% Display
 % time=toc;
 figure
-plot (V,P,'g--', 'LineWidth',1.4)
+plot (V,P,'r--', 'LineWidth',1.4)
 ylim([0 inf])
 % legend('N_s=8, N_p = 1','N_s=1, N_p = 8','N_s=4, N_p = 2','N_s=2, N_p = 4','N_s=1, N_p = 1')
 xlabel('Voltage (V)')
 ylabel ('Power')
-title('PV-Array & Different-Operating-Conditions')
+title(['PV-Array (N_s = ',num2str(Ns), ', N_p = ',num2str(Np),')',' & Different-Operating-Conditions (G = ',num2str(G), ', T = ',num2str(T),')'])
 
 shg
 
