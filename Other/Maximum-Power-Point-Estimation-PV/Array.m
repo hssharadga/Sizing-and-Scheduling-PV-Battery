@@ -1,4 +1,4 @@
-% This script calculates the maximum power of an array at given operating condition (G,T) and with given size (Ns, Np) using the searching method
+% This script calculates the maximum power of an array at different operating conditions (G,T) and with different sizes (Ns, Np) using the searching method
 
 % tic;
 global Im
@@ -35,8 +35,8 @@ Ki=0.0032;
 Gn=1000;
 T_ref=25;
 %% Number of cells
-Ns_=Ns*Nc_m_s;  % Number of cells connected in series in an array 
-Np_=Np*Nc_m_p;  % Number of cells connected in parallel in an array
+Ns_=Ns*Nc_m_s;  % Ns_==Number of cells connected in series in an array;   Ns==Number of PV modules connected in series in an array 
+Np_=Np*Nc_m_p;  % Np_==Number of cells connected in parallel in an array; Np==Number of PV modules  connected in parallel in an array
 %% Fixed
 k=1.380650e-23;
 q=1.602176e-19 ;
@@ -46,9 +46,7 @@ detla=T-T_ref;
 a=n*Vt;
 
 % Note: The parameters (Rsh, Io, Ipv)are calcualted assuming  Ns= 1 and Np=1; For example: Ns_=Ns*Nc_m_s,  Ns_=1*Nc_m_s=Nc_m_s
-% The effect of Ns and Np will be only applied on the final equation: (I-V) lambertw equation
-
-
+% The effect of Ns and Np will be only applied on the (I-V) equation which is written in the form of lambertw equation (See lines 65-70 in this script)
 
 Rsh=Rshn*Gn/G;
 Io=(Isc_n+Ki*detla+((Isc_n+Ki*detla)*Rs-(Nc_m_p/Nc_m_s)*(Voc_n+Kv*detla))/Rsh)/(Nc_m_p*(exp((Voc_n+Kv*detla)/(a*Nc_m_s))-exp((Isc_n+Ki*detla)*Rs/(a*Nc_m_p))));
@@ -60,7 +58,7 @@ pp=vf*20;       % Number of searching steps
 I = [];
 V = [];
 P = [];
-Pmax=0;
+Pmax_array=0;
 for i=0:pp
     V (i+1)=i*vf/pp;
     VV=i*vf/pp;
@@ -76,16 +74,16 @@ for i=0:pp
 % end
     I(i+1)=II;
     P(i+1)=II*VV;
-if P(i+1)> Pmax
-Pmax=P(i+1);
+if P(i+1)> Pmax_array
+Pmax_array=P(i+1);
 Imax=I(i+1);
-Vmax= V(i+1);
+Vmax_array= V(i+1);
 end
 end
 %% Display
 % time=toc;
 figure
-plot (V,P,'r--', 'LineWidth',1.4)
+plot (V,P,'r-', 'LineWidth',1.4)
 ylim([0 inf])
 % legend('N_s=8, N_p = 1','N_s=1, N_p = 8','N_s=4, N_p = 2','N_s=2, N_p = 4','N_s=1, N_p = 1')
 xlabel('Voltage (V)')
@@ -94,8 +92,8 @@ title(['PV-Array (N_s = ',num2str(Ns), ', N_p = ',num2str(Np),')',' & Different-
 
 shg
 
-disp(['Pmax = ', num2str(Pmax)])
-disp(['Vmax = ', num2str(Vmax)])
+disp(['Pmax_array = ', num2str(Pmax_array)])
+disp(['Vmax_array = ', num2str(Vmax_array)])
 
 % disp(['time = ', num2str(time)])
 
