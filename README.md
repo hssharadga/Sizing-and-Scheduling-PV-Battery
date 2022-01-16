@@ -30,6 +30,9 @@ D)
    2. Searching algorithm as shown in Other Folder> Maximum-Power-Point-Estimation-PV.  
 
 
-
+# Info: Scheduling Paper
+- There are two codes for SDP (Stochastic Dynamic Programming):
+1. One written in MATLAB form scratch
+2. One is based (SDDP: Stochastic Dual Dynamic Programming) library written by researchers in Julia language.
 
 
