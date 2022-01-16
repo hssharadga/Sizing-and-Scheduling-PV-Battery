@@ -7,12 +7,12 @@ Authors: Hussein Sharadga, Dr. Bryan Rasmussen
    
 You need to install and import CVX library to your MATLAB (http://cvxr.com/), obtain the licenses (http://cvxr.com/cvx/licensing/) and  obtain the licenses for MOSEK solver.
    
-Please support my reserch by cite the following related papers:
+Please support my reserch by cite my PhD dissertation  related papers:
    
 A)   
 B)   
 C)   
-D)   
+D)   Time series forecasting of solar power generation for large-scale photovoltaic plants (DOI: https://doi.org/10.1016/j.renene.2019.12.131)
    
 # General Info   
 - To procede, find "Main" MATLAB code.
