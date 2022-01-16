@@ -33,6 +33,6 @@ D)
 # Info: Scheduling Paper
 - There are two codes for SDP (Stochastic Dynamic Programming):
 1. One written in MATLAB form scratch
-2. One is based (SDDP: Stochastic Dual Dynamic Programming) library written by researchers in Julia language.
+2. One is based on a library written by researchers in Julia language: (SDDP: Stochastic Dual Dynamic Programming).
 
 
