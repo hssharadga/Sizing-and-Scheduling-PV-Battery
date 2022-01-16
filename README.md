@@ -32,7 +32,7 @@ D)   Time series forecasting of solar power generation for large-scale photovolt
 
 # Info: Scheduling Paper
 - There are two codes for SDP (Stochastic Dynamic Programming):
-1. One written in MATLAB form scratch in our lab which is very slow!
-2. One addvanced is based on a library written by researchers in Julia language which is very fast and based on SDDP (SDDP: Stochastic **Dual** Dynamic Programming).
+    1. One written in MATLAB form scratch in our lab which is very slow!
+    2. One addvanced is based on a library written by researchers in Julia language which is very fast and based on SDDP (SDDP: Stochastic **Dual** Dynamic Programming).
 
 
