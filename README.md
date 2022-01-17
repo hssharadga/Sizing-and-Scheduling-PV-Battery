@@ -12,7 +12,7 @@ Please support my reserch by cite my PhD dissertation  related papers:
 A)  Sizing paper:    
 B)  Scheduling paper:    
 C)  Algorithm selection:     
-D)   Time series forecasting of solar power generation for large-scale photovoltaic plants (DOI: https://doi.org/10.1016/j.renene.2019.12.131)
+D)  Time series forecasting of solar power generation for large-scale photovoltaic plants (DOI: https://doi.org/10.1016/j.renene.2019.12.131)
    
 # General Info   
 - To procede, find "Main" MATLAB code.
