@@ -15,7 +15,7 @@ C)  Algorithm selection:
 D)  Time series forecasting of solar power generation for large-scale photovoltaic plants (DOI: https://doi.org/10.1016/j.renene.2019.12.131)
    
 # General Info   
-- To procede, find "Main" MATLAB code.
+- To procede with any folder, find "Main" MATLAB code.
    
 # Info: Sizing Paper
 
