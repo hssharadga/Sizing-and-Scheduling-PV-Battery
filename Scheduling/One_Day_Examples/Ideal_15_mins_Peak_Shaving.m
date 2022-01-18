@@ -16,25 +16,25 @@ demand_=Load_15(start:endd)/1000;
 
 %% CVX
 % cvx_solver SDPT3;
-cvx_solver MOSEK;
+% cvx_solver MOSEK;
 L = 0.25*tril(ones(horizon*4));% 0.25 because it is 15-minute Peak Shaving
 
 cvx_begin
     variable x(horizon*4);
-    Es = E0+cb*L*x;
-    grid=demand_+cb*max(eta*x,x/eta)-N_PV*PV_Power_';
+    Es = E0+Cb*L*x;
+    grid=demand_+Cb*max(eta*x,x/eta)-N_PV*PV_Power_';
     grid=max(grid,0)
     minimize sum(grid)*rate+rate_max.*max((grid));
     subject to
-        0<=Es<=cb;
+        0<=Es<=Cb;
         x>=control_min;
         x<=control_max;
 cvx_end
 %%
 
 u=x;
-grid=demand_+cb.*max(eta.*u,u/eta)-N_PV.*PV_Power_';
-Es = E0+cb*L*u;
+grid=demand_+Cb.*max(eta.*u,u/eta)-N_PV.*PV_Power_';
+Es = E0+Cb*L*u;
  
 %% To find the Peak vector
  peak=0;

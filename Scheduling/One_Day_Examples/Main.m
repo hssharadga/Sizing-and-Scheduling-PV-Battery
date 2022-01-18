@@ -29,22 +29,24 @@ Day_number_correction;          % Loading the load and PV profiles  & day number
 %% Different methods
 % A: Hourly Peak Shaving
 Ideal                                     % Assuming the predcition accurcy is 100% (the Load and PV profile are given), the schedule is optimized using convex optimization
-Forecast                                  % Forecasting the load and PV (one-time, i.e, no receding forecasting horizon)and then constructing the battery schedule one-time using convex optimization (no realization, no receding forecasting and no receding Scheduling)
-Forecast_Receding                         % Forecast with receding horizon (the forecasted profiles (Load and PV generation) are updated every one step). The Peak Target is updated every hour (Hourly_Realization). The battery-schedule is updated hourly (Hourly_Scheduling). 
+Forecast                                  % Forecasting the load and PV (one-time, i.e, no receding forecasting horizon)and then constructing the battery schedule one-time using convex optimization (no realization (no sensor), no receding forecasting and no receding Scheduling)
+Forecast_Receding                         % Forecast with receding horizon (Receding Forecasting): the forecasted profiles (Load and PV generation) are updated every one step. The Peak Target is updated every hour (Hourly_Realization). The battery-schedule is updated every hour (Receding & Hourly-Based Scheduling). 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SDP: Stochastic Dynamic Programming
 SDP_Main                 % Consumes about 16 mins to estimate the future cost
 
 SDP_Simulation           % See comments below
 % Forecasting the load and PV and then accounting for the uncertainty by using SDP (Stochastic Dynamic Programming)to constructe the battery schedule
-% The schedule is updated every one hour after updating the forecasted profile every one hour (Hourly_Scheduling)
-% and after hourly updating the Peak (Hourly_Realization)that has been recorded so far
+% The schedule is updated every one hour (Receding & Hourly-Based Scheduling) after updating the forecasted profile every one hour (Receding Forecasting)
+% and after hourly updating the Peak (Hourly_Realization) the Peak that has been recorded so far
 % Other work on SDP is solved in Julia Language
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % B: 15-mins Peak Shaving
 Ideal_15_mins_Peak_Shaving
-Forecast_Receding_15_mins_Realization_Hourly_Scheduling     % Forecast with receding horizon (forecasted profiles are updated hourly )but the Peak Target is updated every 15 mins (15_mins_Realization) as it is intended to shave the 15-mins peak. The battery-schedule is updated hourly (Hourly_Scheduling)
-Forecast_Receding_15_mins_Realization_15_mins_Scheduling    % The schedule is updated every 15-mins (15_mins_Scheduling), The peak target is updated every 15-mins (15_mins_Realization), the forcasted profiles are updated every one hour
+Forecast_Receding_15_mins_Realization_Hourly_Scheduling     % Forecast with receding horizon (forecasted profiles are updated hourly )but the Peak Target is updated every 15 mins (15_mins_Realization) as it is intended to shave the 15-mins peak. The battery-schedule is updated hourly (Receding & Hourly-Based Scheduling)
+Forecast_Receding_15_mins_Realization_15_mins_Scheduling    % The schedule is updated every 15-mins (Receding & 15-mins-based Scheduling), The peak target is updated every 15-mins (15_mins_Realization), the forcasted profiles are updated every one hour (Receding Forecasting)
 Shaving_15_min_using_Forecast_Decision                      % Shaving the 15-mins peak using the decision obtained by Forecast scripts
 
 

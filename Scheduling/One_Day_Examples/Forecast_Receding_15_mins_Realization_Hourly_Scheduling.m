@@ -1,7 +1,7 @@
 
-% The forecasted profiles (Load and PV) are updated with receding horizon every one step (every one hour)
-% The forecasting is based on forecasting the hourly profiles while this script is intended to shave the 15-minute peak; forecasting the hourly profile is easier than forecasting the 15-minute profile)
-% The Schedule is constructed for one day ahead but also is updated every one-step/one-hour (Hourly_Scheduling). It is updated based on the new forecasted profiles and the new peak Target 
+% The forecasted profiles (Load and PV) are updated with receding horizon every  one hour (receding forecasting).
+% The forecasting is based on forecasting the hourly profiles while this script is intended to shave the 15-minute peak; forecasting the hourly profile is easier than forecasting the 15-minute profile.
+% The Schedule is constructed for one day ahead but also is updated every one-step/one-hour (Receding & Hourly-Based Scheduling). It is updated based on the new forecasted profiles and the new peak Target 
 % The Peak Target is updated every 15-mins (15_mins_Realization)
 
 %% To calcuate the day number and 
@@ -22,7 +22,7 @@ demand_15=Load_15(start:endd)/1000;
 global forecasted_Load_daily_matrix_
 global forecasted_PV_daily_matrix_;
 
-cvx_solver SDPT3;
+% cvx_solver SDPT3;
 
 horizon=15;
 E0=Cb/2;       % E0 is the energy sotrd in the battery at t=0, in [kwh]

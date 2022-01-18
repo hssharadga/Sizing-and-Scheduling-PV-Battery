@@ -4,7 +4,7 @@ demand_=Load_real_given_day_/1000;
 PV_Power_=PV_real_given_day_/1000;
 
 %% CVX Optimization
-cvx_solver SDPT3;
+% cvx_solver SDPT3;
 % cvx_solver MOSEK;
 
 E0=Cb/2;                     % E0 is the energy sotrd in the battery at t=0, in [kwh]

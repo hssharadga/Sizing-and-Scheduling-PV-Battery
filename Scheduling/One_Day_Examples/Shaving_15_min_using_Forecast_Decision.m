@@ -18,9 +18,9 @@ endd=16+60+96*(day_-1);% 6 P.M
 PV_Power_=PV_15(start:endd)/1000;
 demand_=Load_15(start:endd)/1000;
 
-grid=demand_+cb.*max(eta.*u,u/eta)-N_PV.*PV_Power_';
+grid=demand_+Cb.*max(eta.*u,u/eta)-N_PV.*PV_Power_';
 L = 0.25*tril(ones(60));% 0.25 b/c it is 15-minute
-Es = E0+cb*L*u;
+Es = E0+Cb*L*u;
 
 %% To find the peak
  peak=0;

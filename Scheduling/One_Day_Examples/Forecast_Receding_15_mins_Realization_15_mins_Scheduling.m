@@ -1,4 +1,4 @@
-% The battery schedule is updated every 15-mins (15_mins_Scheduling), The peak target is updated every 15-mins (15_mins_Realization), the forcasted profiles are updated every one hour
+% The battery schedule is updated every 15-mins (Receding & 15-mins-based Scheduling), The peak target is updated every 15-mins (15_mins_Realization), the forcasted profiles are updated every one hour (Receding Forecasting)
 
 
 %% To calcuate the day number 
@@ -14,7 +14,7 @@ PV_Power_15=PV_15(start:endd)/1000; % PV_15 is the 15-minute real PV profile
 demand_15=Load_15(start:endd)/1000;
 
 %% CVX
-cvx_solver SDPT3;
+% cvx_solver SDPT3;
 global forecasted_Load_daily_matrix_
 global forecasted_PV_daily_matrix_;
 

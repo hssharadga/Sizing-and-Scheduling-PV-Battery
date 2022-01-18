@@ -29,7 +29,7 @@ PV_Power_Forecast=PV_Forecast/1000; % Convert to [kW]
 
 %% CVX Optimization
 
-cvx_solver SDPT3;
+% cvx_solver SDPT3;
 E0=Cb/2;                   % E0 is the energy sotrd in the battery at t=0, in [kwh]
 L = 1*tril(ones(horizon)); % L unit is hr for both hourly peak shaving and 15-minute peak shaving
                            % L = 1/4*tril(ones(horizon));% For 15-minute peak shaving
