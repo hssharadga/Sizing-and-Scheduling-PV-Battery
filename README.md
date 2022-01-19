@@ -13,7 +13,7 @@ Please support my reserch by cite my PhD dissertation  related papers:
    
 A)  Sizing paper:    
 B)  Scheduling paper:    
-C)  Algorithm selection:     
+C)  Algorithm Selection:     
 D)  Time series forecasting of solar power generation for large-scale photovoltaic plants (DOI: https://doi.org/10.1016/j.renene.2019.12.131)
    
 # General Info   
@@ -42,6 +42,6 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
      2. Use VS-Code: https://www.julia-vscode.org
      3. We use the following SDDP library: https://github.com/odow/SDDP.jl 
 
-# Info: Algorithm selection
+# Info: Algorithm Selection
 
 
