@@ -42,6 +42,8 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
      2. Use VS-Code: https://www.julia-vscode.org
      3. We use the following SDDP library: https://github.com/odow/SDDP.jl 
 
+% SDDP.jl has the full notation
+
 # Info: Algorithm Selection
 
 
