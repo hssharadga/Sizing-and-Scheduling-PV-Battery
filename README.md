@@ -38,8 +38,8 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
     2. One is addvanced, which is based on a library written by researchers in Julia language. The library is very fast and based on SDDP (SDDP: Stochastic **Dual** Dynamic Programming).
 - For Julia SDDP codes, please read the following notes:
 
-     Download Julia: https://julialang.org/downloads/
-     Use VS-Code: https://www.julia-vscode.org
-     We use the following library: https://github.com/odow/SDDP.jl 
+     1. Download Julia: https://julialang.org/downloads/
+     2. Use VS-Code: https://www.julia-vscode.org
+     3. We use the following library: https://github.com/odow/SDDP.jl 
 
 
