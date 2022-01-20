@@ -1,6 +1,6 @@
 # Note: To Run a Block (Alt+Enter)
 
-# hourly realization, receding and hourly-based Scheduling, one-time forecasting (no receding): See line 130
+# hourly realization, receding and hourly-based Scheduling, one-time forecasting (no receding)
 
 ## Block Start
 using SDDP
@@ -43,7 +43,10 @@ D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Exampl
 cor = D[:, floor(Int, first):floor(Int, last)]
 cor_PV = Matrix(cor)
 
-# Calling the forecasted load of a given day and given horizon
+
+# One-time Forecasting: 
+
+# Calling the forecasted load of a given day and given horizon (forecasting horizon=15)
 D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\forecasted_Load_daily_matrix_new.csv", DataFrame, header = false);
 Load_ = D[Day_number, floor(Int, first):floor(Int, last)]
 # 10 Scenarios Generation
@@ -52,13 +55,18 @@ Load_corr_ = cor_Load .* Load' / 1000
 #
 
 
-# Calling the forecasted PV of a given day and given horizon
+# Calling the forecasted PV of a given day and given horizon (forecasting horizon=15)
 D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\forecasted_PV_daily_matrix_new.csv", DataFrame, header = false);
 PV_ = D[PV_day_number, floor(Int, first):floor(Int, last)]
 # 10 Scenarios Generation
 PV = Vector(PV_)
 PV_corr_ = cor_PV .* PV' / 1000
 #
+
+
+
+
+
 
 # The real value of the load and PV
 D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\real_daily_matrix_Load_new.csv", DataFrame, header = false);
@@ -126,8 +134,7 @@ SDDP.train(model, iteration_limit = 300, print_level = 1)
 # Test
 historical_sampler = SDDP.Historical(
     [
-    (i, (Load_energy_corr = demand_[i], PV_energy_corr = PV_Power_[i])) # demand_ = Real; Real value reading; realization
-    # hourly realization, receding and hourly-based  Scheduling, one-time forecasting (no receding)
+    (i, (Load_energy_corr = demand_[i], PV_energy_corr = PV_Power_[i])) # demand_== real profile; testing on a real profile means it is receding scheduling
     for i = 1:15
 ],
 )
