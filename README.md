@@ -47,4 +47,8 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 
 # Info: Algorithm Selection
 
+- ARIMA-based Scheduling
+- Common Optimal Stratgy Scheduling
+- Common Optimal Stratgy (Day-name based) Scheduling
+
 
