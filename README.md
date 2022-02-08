@@ -46,7 +46,7 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 - Forecasting is hourly based. ARIMA model is used for forecasting both the PV and electrical load.
 
 # Info: Algorithm Selection
-
+- It is covered in Scheduling Folder> 
 - ARIMA-based Scheduling
 - Common Optimal Stratgy Scheduling
 - Common Optimal Stratgy (Day-name based) Scheduling
