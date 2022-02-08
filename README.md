@@ -45,6 +45,7 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 - Scheduling Folder>> One_Day_Examples_SDDP_Julia Folder:  SDDP.jl has the full notation so please start with it.
 - Forecasting is hourly based. ARIMA model is used for forecasting both the PV and electrical load.
 
+
 # Info: Algorithm Selection
 - It is covered in  Scheduling Folder> One_Year_Simulations Folder
 - ARIMA-based Scheduling
