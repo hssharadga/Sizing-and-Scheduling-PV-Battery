@@ -15,19 +15,38 @@ control_max=0.4;   % Maximum u charging rate
 control_min=-1;    % Minimum u charging rate
 horizon=15;        % The school load is between 4 am and 6 pm
 
-
-day_number=45;                  % We have 75 days for test, Change this one for different examples, Choose number between 1-75
-
+day_number=40;                  % We have 75 days for test, Change this one for different examples, Choose number between 1-75
 
 Day_number_correction;          % Loading the load and PV profiles  & day number correction
 
 
-%%
+%% Run Julia Code
 % You need to run any of the following "Julia Codes" before proceeding . Make sure you change the paramters in Julia code to make them consistent with the paramters defined here
-% SDDP.jl has the full notation
-% SDDP.jl hourly realization, receding and hourly-based Scheduling, one-time forecasting (no receding)
-% SDDP_2  hourly realization, receding and hourly-based Scheduling, receding forecasting 
+% Note: SDDP.jl    has the full notation so please start with it
+% Note that all Forecastings are hourly based.
+% Do not uncomment this section as these codes need to be run in Julia
 
-Julia_Results_hourly_Shaving 
-% Go to Julia_Results_hourly_Shaving (Line 15) then update the address to the current address 
-% Plot the results obtained by (SDDP) written in Julia
+
+% SDDP.jl    hourly realization, receding and hourly-based Scheduling, one-time forecasting (one-time==no receding)
+% SDDP_2.jl  hourly realization, receding and hourly-based Scheduling, receding forecasting 
+
+% SDDP_3.jl  15-mins realization, receding & hourly-based Scheduling, one-time forecasting
+% SDDP_4.ji  15-mins realization, receding & hourly-based scheduling, receding forecasting 
+
+% SDDP_5.jl  15-mins realization, receding & 15-mins-based scheduling, one-time forecasting
+% SDDP_6.jl  15-mins realization, receding & 15-mins-based scheduling, receding forecasting
+
+%% Compare with the ideal case
+% Ideal                        % shaving the hourly peak
+% Ideal_15_mins_Peak_Shaving   % shaving the 15-mins peak
+
+%%
+
+% Note:
+% Go to Results_and_Plot  (Lines 11-13) then update the address to the current address 
+% Results_and_Plot_Hourly  (Lines 17-19) then update the address to the current address 
+% Note end
+
+Results_and_Plot              % Shaving the 15-mins peak with 6 different techniques
+%Results_and_Plot_Hourly      % Use this one for hourly peak shaving with  SDDP.jl  and SDDP_2.jl
+

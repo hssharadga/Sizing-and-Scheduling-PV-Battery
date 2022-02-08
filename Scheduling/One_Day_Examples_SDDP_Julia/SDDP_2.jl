@@ -14,7 +14,7 @@ using CSV
 using DataFrames
 
 
-Day_number = 45
+Day_number = 40
 
 
 if mod(Day_number, 5) != 0
@@ -82,7 +82,7 @@ for ij = 1:15 # Updating the forecasted value (receding forecasting) and accordi
     PV_corr_ = cor_PV .* PV' / 1000
     #
 
-    # The real value of the load and PV of a given day and given horizon  (horizon is receding)
+    # The real value of the load and PV of a given day and given horizon  (horizon is receding) (hourly profiles)
     D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\real_daily_matrix_Load_new.csv", DataFrame, header = false)
     Load_ = D[Day_number, floor(Int, first):floor(Int, last)]
     Load = Vector(Load_)
@@ -183,3 +183,4 @@ uu_ = u_receding
 
 CSV.write("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\uu.csv", Tables.table(uu_'), writeheader = false)
 
+##

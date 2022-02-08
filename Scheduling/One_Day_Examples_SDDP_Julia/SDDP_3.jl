@@ -9,7 +9,7 @@ const GRB_ENV = Gurobi.Env()
 using CSV
 using DataFrames
 
-Day_number = 45 # out of 75 days
+Day_number = 40 # out of 75 days
 
 # To calcuate the day number in the year out of 360
 if mod(Day_number, 5) != 0
@@ -22,7 +22,7 @@ PV_day_number = day_ - 252
 
 
 
-# Read load and PV 15-mins Porfile
+# Read load and PV (15-mins Porfile)
 
 start = 16 + 1 + 96 * (day_ - 1) # 4 A.M
 endd = 16 + 60 + 96 * (day_ - 1) # 6 P.M
@@ -106,7 +106,7 @@ for ij = 1:15
     PV_corr_ = PV_corr__[:, end-(horizon_new)+1:end]     # PV_corr__    was previously defined outside the For loop
 
 
-    # The real value of the load and PV of a given day and given horizon (horizon is receding)
+    # The real value of the load and PV of a given day and given horizon (horizon is receding) (hourly profiles)
     D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\real_daily_matrix_Load_new.csv", DataFrame, header = false)
     Load_ = D[Day_number, floor(Int, first):floor(Int, last)]
     Load = Vector(Load_)

@@ -12,7 +12,7 @@ using Tables
 using DelimitedFiles
 
 
-Day_number = 45 # We have 75 days for test. Choose a number betwwen 1-75.
+Day_number = 40 # We have 75 days for test. Choose a number betwwen 1-75.
 
 
 # To calcuate the day number in the year out of 360; See Loading_and_Cleaning MATLAB script for more details
@@ -21,7 +21,7 @@ if mod(Day_number, 5) != 0
 else
     day_ = (floor(Int, Day_number / 5)) * 7 + -2 + 255
 end
-# To find the PV day number out of 108
+# To find the PV day number out of 108; See Loading_and_Cleaning MATLAB script for more details
 PV_day_number = day_ - 252
 
 
@@ -68,12 +68,11 @@ PV_corr_ = cor_PV .* PV' / 1000
 
 
 
-# The real value of the load and PV
+# The real value of the load and PV (hourly profiles)
 D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\real_daily_matrix_Load_new.csv", DataFrame, header = false);
 Load_ = D[Day_number, floor(Int, first):floor(Int, last)]
 Load = Vector(Load_)
 demand_ = Load' / 1000
-
 
 D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\real_daily_matrix_PV_new.csv", DataFrame, header = false);
 PV_ = D[PV_day_number, floor(Int, first):floor(Int, last)]
