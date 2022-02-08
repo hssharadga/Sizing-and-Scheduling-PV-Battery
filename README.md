@@ -50,6 +50,6 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 - ARIMA-based Scheduling
 - Common Optimal Stratgy Scheduling
 - Common Optimal Stratgy (Day-name based) Scheduling
-* You can codes other algorithms (moving average, year average, naive forecasting, Neural Network based Scheduling) in the same way
+> You can codes other algorithms (moving average, year average, naive forecasting, Neural Network based Scheduling) in the same way
 
 
