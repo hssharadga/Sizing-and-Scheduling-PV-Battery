@@ -48,5 +48,5 @@ Day_number_correction;          % Loading the load and PV profiles  & day number
 % Note end
 
 Results_and_Plot              % Shaving the 15-mins peak with 6 different techniques
-%Results_and_Plot_Hourly      % Use this one for hourly peak shaving with  SDDP.jl  and SDDP_2.jl
+%Results_and_Plot_Hourly      % Use this one for hourly peak shaving, i.e, after running  SDDP.jl  or SDDP_2.jl. Otherwise an error will be returned
 
