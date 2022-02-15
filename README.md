@@ -49,8 +49,8 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 # Info: Algorithm Selection
 - It is covered in  Scheduling Folder> One_Year_Simulations Folder
 - ARIMA-based Scheduling
-- Common Optimal Stratgy Scheduling
-- Common Optimal Stratgy (Day-name based) Scheduling
+- Common Optimal Strategy Scheduling
+- Common Optimal Strategy (Day-name based) Scheduling
 - You can codes other algorithms (Moving Average, Year Average, Naive Forecasting, Neural Network based Scheduling) in the same way.
 
 
