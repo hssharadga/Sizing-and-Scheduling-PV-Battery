@@ -9,7 +9,7 @@ Authors: Hussein Sharadga, Dr. Bryan Rasmussen
    
 You need to install and import CVX library to your MATLAB (http://cvxr.com/), obtain the licenses (http://cvxr.com/cvx/licensing/) and  obtain the licenses for MOSEK solver.
    
-Please support my reserch by cite my PhD dissertation  related papers:
+Please support my reserch by **cite my PhD dissertation related papers**:
    
 A)  Sizing paper:    
 B)  Scheduling paper:    
