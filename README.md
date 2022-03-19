@@ -47,10 +47,10 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 - The sizing work can be applied for any facility. The schduling work here is for school where the control/forecasting horizon is between 4 am and 6 pm. The battery might be charged during this interval (the optimization algorithm will decide about that). The battery is set up on the charging mode after 6 pm till 4 am. The battery will be fully charged at 4 am. The battery is charged slowly to make sure the peak will not occur at the night (the peak in the night is not monteried. However, the school has low load after 6 pm).
 
 # Info: Algorithm Selection
-- It is covered in  Scheduling Folder> One_Year_Simulations Folder
-- ARIMA-based Scheduling
+- The following algorithms are covered in  Scheduling Folder> One_Year_Simulations Folder
+- ARIMA-based Scheduling: Differernt timeframe: receding/one-time forecasting, receding/one-time scheduling, realization/no realization.  one-time==non-receding
 - Common Optimal Strategy Scheduling
 - Common Optimal Strategy (Day-name based) Scheduling
-- You can codes other algorithms (Moving Average, Year Average, Naive Forecasting, Neural Network based Scheduling) in the same way.
+- You can codes missing the other algorithms in the same ways: Moving Average, Year Average, Naive Forecasting, Neural Network based Scheduling
 
 
