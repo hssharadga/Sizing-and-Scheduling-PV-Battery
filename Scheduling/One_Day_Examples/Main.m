@@ -1,3 +1,6 @@
+clc
+clear all
+
 global N_PV
 global Cb
 global horizon
