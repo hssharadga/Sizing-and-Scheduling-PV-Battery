@@ -1,5 +1,5 @@
 clc
-clear
+clear all
 
 global rate_max
 global rate
