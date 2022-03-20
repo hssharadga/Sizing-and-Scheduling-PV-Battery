@@ -1,5 +1,7 @@
 # 15-mins realization, receding & hourly-based scheduling, receding forecasting 
 
+# Please adjust all addresses that you will find in this code to the current address
+
 ##
 using SDDP
 using Gurobi
