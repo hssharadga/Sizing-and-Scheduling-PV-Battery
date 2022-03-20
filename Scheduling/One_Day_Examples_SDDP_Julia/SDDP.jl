@@ -34,7 +34,7 @@ last = sum_
 first = last - horizon_new + 1
 
 # Calling the corrections (10 percentiles or 10 scenarios) of the load 
-D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\per_Load.csv", DataFrame, header = false);       # Adjust the address to the current address
+D = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\per_Load.csv", DataFrame, header = false);      # Please adjust the address to the current address
 cor = D[:, floor(Int, first):floor(Int, last)]
 cor_Load = Matrix(cor)
 
