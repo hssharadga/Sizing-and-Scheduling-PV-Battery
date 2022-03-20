@@ -52,5 +52,5 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 - Common Optimal Strategy Scheduling
 - Common Optimal Strategy (Day-name based) Scheduling
 - SDDP (receding forecasting, hourly realization, hourly-based and receding scheduling)
-- You can codes missing the other algorithms in the same ways: Moving Average, Year Average, Naive Forecasting, Neural Network based Scheduling
+- You can codes the missing algorithms in the same way: Moving Average, Year Average, Naive Forecasting, Neural Network based Scheduling
 
