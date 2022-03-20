@@ -156,9 +156,7 @@ println(x.out)
 
 
 # Storing "Charging rate" as it will be processed by MATLAB  
-
 uu_ = reshape(uu, 1, 15)# convert vector to matix
-# O
 CSV.write("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\uu.csv", Tables.table(uu_'), writeheader = false)
 
 
@@ -167,15 +165,4 @@ CSV.write("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples 
 
 
 
-# These following  methods work fine to store the output
-# 1
-using DelimitedFiles
-writedlm("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\uu.csv", uu_, ',')
-# 2
-CSV.write("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\uu.csv", DataFrame(Tables.table(uu_')), header = false)
-# 3
-CSV.write("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\uu.csv", DataFrame(uu_', :auto), header = false)
 
-# These following ones do not work
-# 
-CSV.write("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\uu.csv", (x = uu_))
