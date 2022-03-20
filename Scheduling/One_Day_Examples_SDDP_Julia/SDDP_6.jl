@@ -1,6 +1,8 @@
 
 # 15-mins realization, receding & 15-mins-based scheduling, receding forecasting
 
+# Please adjust all addresses that you will find in this code to the current address
+
 ##
 #using CSV
 #using DataFrames
