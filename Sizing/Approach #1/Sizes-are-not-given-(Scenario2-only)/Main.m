@@ -25,7 +25,7 @@ Ub=[4000,2000];% The upper bounds
 %% Firsit option: Surrogate Optimization
 opts = optimoptions('surrogateopt','MaxFunctionEvaluations',35);
 intcon=[1,2];% Integer constraint for the first and second variables
-[sol,fval,eflag,outpt] = surrogateopt(@obj,Ib,Ub,intcon,opts)
+[sol,fval,eflag,outpt] = surrogateopt(@Obj,Ib,Ub,intcon,opts)
 
 %% Second option: Fmincon
 % max_evaluation=30
