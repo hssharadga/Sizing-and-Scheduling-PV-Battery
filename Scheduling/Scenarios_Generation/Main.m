@@ -1,4 +1,6 @@
 % Main
+clc
+clear all
 
 Loading_and_Cleaning % Load the data and preparing it for training (forecasting)
 
