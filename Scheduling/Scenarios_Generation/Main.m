@@ -13,6 +13,6 @@ step=4; % The time-step number in the forecasting horizon. It should be less or 
 %1
 Load_Forecasting_Scenarios % Load: Electrical Load
 %2
-% PV_Forecasting_Scenarios
+% PV_Forecasting_Scenarios  % Do not forget  to adjust the value of H to be 13 in line 5
 
 Scenarios
