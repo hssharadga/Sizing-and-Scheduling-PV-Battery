@@ -4,6 +4,7 @@
 # (1) The forecasted profile are updated every one step
 # (2) The scenarios are also updated for the new horizon, thus SDDP needs to be trained again for every step
 
+# Please adjust all addresses that you will find in this code to the current address
 
 ##
 
@@ -31,7 +32,7 @@ PV_day_number = day_ - 252
 start = 16 + 1 + 96 * (day_ - 1) # 4 A.M
 endd = 16 + 60 + 96 * (day_ - 1) # 6 P.M
 
-PV_15_ = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\PV_15.csv", DataFrame, header = false)
+PV_15_ = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\PV_15.csv", DataFrame, header = false) 
 Load_15_ = CSV.read("C:\\Users\\hssharadga\\Desktop\\Github\\Scheduling\\One Day Examples SDDP (Julia)\\Load_15.csv", DataFrame, header = false)
 
 Load_15 = Load_15_[floor(Int, start):floor(Int, endd), 1] / 1000
