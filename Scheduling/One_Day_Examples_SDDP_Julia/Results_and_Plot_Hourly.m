@@ -14,8 +14,8 @@ Load_real_given_day_=Load_real_(:,day_number);
 
 L = 1*tril(ones(horizon));
 
-% Reading the results obtained by Julia language
-cd 'C:\Users\hssharadga\Desktop\Github\\Scheduling\\One Day Examples SDDP (Julia)' % Update the address to the current address
+%%  Reading the results obtained by Julia language
+% cd 'C:\Users\hssharadga\Desktop\Github\\Scheduling\\One Day Examples SDDP (Julia)' % Update the address to the current address
 u=csvread('uu.csv'); % results obtained by Julia language
 
 demand_=Load_real_given_day_/1000;
