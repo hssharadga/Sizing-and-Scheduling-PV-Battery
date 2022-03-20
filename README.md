@@ -51,6 +51,5 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 - ARIMA-based Scheduling: Differernt timeframes: receding/one-time forecasting, receding/one-time scheduling, realization/no realization.  one-time==non-receding
 - Common Optimal Strategy Scheduling
 - Common Optimal Strategy (Day-name based) Scheduling
-- SDDP (receding forecasting, hourly realization, hourly-based and receding scheduling)
 - You can codes the missing algorithms in the same way: Moving Average, Year Average, Naive Forecasting, Neural Network based Scheduling
 
