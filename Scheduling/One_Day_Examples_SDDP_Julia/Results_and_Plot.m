@@ -9,7 +9,7 @@ else
 end   
 
 %% Reading the charging-rate-vector and calculations
-cd 'C:\Users\hssharadga\Desktop\Github\\Scheduling\\One Day Examples SDDP (Julia)' % Update the address to the current address
+%cd 'C:\Users\hssharadga\Desktop\Github\\Scheduling\\One Day Examples SDDP (Julia)' % Update the address to the current address
 u=csvread('uu.csv');% Results obtained by Julia language
 
 
