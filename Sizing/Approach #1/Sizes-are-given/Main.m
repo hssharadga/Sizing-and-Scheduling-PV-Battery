@@ -1,5 +1,5 @@
 clc
-clear
+clear all
 %% Electrcity fees
 global rate_max
 global rate
