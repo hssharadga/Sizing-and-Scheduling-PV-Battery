@@ -40,12 +40,7 @@ Day_number_correction;          % Loading the load and PV profiles  & day number
 % Ideal                        % shaving the hourly peak
 % Ideal_15_mins_Peak_Shaving   % shaving the 15-mins peak
 
-%%
-
-% Note:
-% Go to Results_and_Plot  (Lines 11-13) then update the address to the current address 
-% Results_and_Plot_Hourly  (Lines 17-19) then update the address to the current address 
-% Note end
+%% Results
 
 Results_and_Plot              % Shaving the 15-mins peak with 6 different techniques
 %Results_and_Plot_Hourly      % Use this one for hourly peak shaving, i.e, after running  SDDP.jl  or SDDP_2.jl. Otherwise an error will be returned
