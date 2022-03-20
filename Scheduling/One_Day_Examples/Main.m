@@ -27,7 +27,7 @@ horizon=15;        % The school load is between 4 am and 6 pm
 day_number=45;                  % We have 75 days for test, Change this one for different examples, Choose number between 1-75
 
 %% Calling
-Day_number_correction;          % Loading the load and PV profiles  & day number correction
+Day_number_correction;          % Loading the load and PV profiles (forecasted and real profiles for both load and PV)  & day number correction
 
 %% Different methods
 % A: Hourly Peak Shaving
