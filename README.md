@@ -1,4 +1,4 @@
-# Sizing and Scheduling Solar Photovoltaic Battery System For Demand Peak Shaving (15-minute monthly demand peak)
+# Sizing and Scheduling Solar Photovoltaic Battery System For Demand Peak-shaving (15-minute monthly demand peak)
      
      
 Authors: Hussein Sharadga, Dr. Bryan Rasmussen
