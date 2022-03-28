@@ -51,5 +51,5 @@ D)  Time series forecasting of solar power generation for large-scale photovolta
 1) ARIMA-based Scheduling: Differernt timeframes: receding/one-time forecasting, receding/one-time scheduling, realization/no realization.  one-time==non-receding
 2) Common Optimal Strategy Scheduling
 3) Common Optimal Strategy (Day-name based) Scheduling
-- You can codes the missing algorithms in the same way: Moving Average, Year Average, Naive Forecasting, Neural Network based Scheduling
+- You can code the missing algorithms in the same way: Moving Average, Year Average, Naive Forecasting, Neural Network based Scheduling
 
