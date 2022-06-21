@@ -11,9 +11,9 @@ You need to install and import CVX library to your MATLAB (http://cvxr.com/), ob
    
 Please support my reserch by **cite my PhD dissertation related papers**:
    
-A)  Sizing paper: Sizing PV-Battery Grid-Connected System Utilizing the Convex Optimization Algorithm for Peak Shaving   
-B)  Scheduling paper: Demand Peak Shaving Using PV-Battery System Under PV Power and Load Prediction-Uncertainty   
-C)  Algorithm Selection: Comparison of Forecasting Methods for Peak Shaving Control of Site Electrical Demand  
+A)  Sizing paper        (Chapter 3): Sizing PV-Battery Grid-Connected System Utilizing the Convex Optimization Algorithm for Peak Shaving   
+B)  Scheduling paper    (Chapter 4): Demand Peak Shaving Using PV-Battery System Under PV Power and Load Prediction-Uncertainty   
+C)  Algorithm Selection (Chapter 6): Comparison of Forecasting Methods for Peak Shaving Control of Site Electrical Demand  
 D)  Time series forecasting of solar power generation for large-scale photovoltaic plants (DOI: https://doi.org/10.1016/j.renene.2019.12.131)
    
 # General Info   
