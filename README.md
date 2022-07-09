@@ -1,10 +1,10 @@
 # Sizing and Scheduling Solar Photovoltaic Battery System For Demand Peak-shaving (15-minute monthly demand peak)
      
      
-Authors: Hussein Sharadga*
+Authors: Hussein Sharadga
    
    
-*Note: Should you face an issue running the codes, please feel free to drop an E-mail (hssharadga@tamu.edu) or LinkedIn message (Hussein Sharadga).
+**Note**: Should you face an issue running the codes, please feel free to drop an E-mail (hssharadga@tamu.edu) or LinkedIn message (Hussein Sharadga).
     
    
 You need to install and import CVX library to your MATLAB (http://cvxr.com/), obtain the licenses (http://cvxr.com/cvx/licensing/). To pair MOSEK solver to CVX and obtain the licenses for MOSEK solver: http://cvxr.com/cvx/doc/mosek.html.
