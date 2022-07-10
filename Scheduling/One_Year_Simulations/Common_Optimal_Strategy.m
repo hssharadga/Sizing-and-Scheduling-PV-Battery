@@ -27,7 +27,7 @@ train22=train2;
 day_num=0;
 % Peak_monthly=zeros(1,12);
 day_of_week=0;
-Peaks_all=[];
+Peaks_all=[]; % Record the daily peak
 horizon=15;
 
 %% Looping
@@ -37,12 +37,12 @@ for i=1:360
     day_of_week=day_of_week+1;
     
     % If weekend then no peak shaving   
-    if day_of_week==6 ||day_of_week==7% weekend
+    if day_of_week==6 ||day_of_week==7 % weekend
 
         if day_of_week==7
             day_of_week=0;
         end
-        peak=max(demand_-PV_Power_'*N_PV);% no battery discharing in weekends
+        peak=max(demand_-PV_Power_'*N_PV);  % no battery discharing in weekends
         Peaks_all=[Peaks_all,peak];
         train22=[train2;PV_(1:13*day_num)']; % Update the train data that will be used to forecast the PV of the next day
                                               % The weekends data will not be added to the Load training-data 
@@ -125,6 +125,7 @@ Peaks_all=[Peaks_all,peak];
 end 
 
 % %% Saving
+Peaks_all
 % csvwrite('C:\Users\hssharadga\Desktop\Spring 2021\One year\Forecast Results\peak_all_daily_based_common.csv',Peaks_all)
 
 
