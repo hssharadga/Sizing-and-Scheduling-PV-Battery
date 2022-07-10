@@ -20,7 +20,7 @@ tic;
 Ib=[1,1];% The lower boundes
 Ub=[4000,2000];% The upper bounds
 
-% cvx_solver MOSEK; % Commercial Solver but free for students, this solver found to be significantly better for the current problem
+cvx_solver MOSEK; % Commercial Solver but free for students, this solver found to be significantly better for the current problem
 
 %% Firsit option: Surrogate Optimization
 opts = optimoptions('surrogateopt','MaxFunctionEvaluations',35);
