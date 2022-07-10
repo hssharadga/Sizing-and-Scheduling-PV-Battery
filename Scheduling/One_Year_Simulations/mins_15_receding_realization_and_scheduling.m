@@ -35,7 +35,7 @@ day_num=0;
 Peak_monthly=zeros(1,12);
 day_of_week=0;
 
-Peaks_all=[];
+Peaks_all=[];   % Daily peak (360 peaks in a year)
 
 horizon=15;
 %% Looping
@@ -171,10 +171,11 @@ grid_real=demand__+Cb*max(eta*x_receding',x_receding'/eta)-N_PV*PV_Power__';
 Peak=max(grid_real);
 
 % Recording 
-Peaks_all=[Peaks_all,Peak]; 
+Peaks_all=[Peaks_all,Peak];       % Daily peak (360 peaks in a year)
 end 
     
 % %% Saving
+Peaks_all
 % csvwrite('C:\Users\hssharadga\Desktop\Spring 2021\One year\Forecast Results\Peaks_all4.csv',Peaks_all)
 
 
