@@ -41,7 +41,7 @@ PV_Profile{1,5}=day5;
 %% intilize
 day_num=0;
 day_of_week=0;
-Peaks_all=[];
+Peaks_all=[];  % Record the daily peak
 horizon=15;
 %% Looping
 for i=1:360
@@ -119,6 +119,7 @@ Peaks_all=[Peaks_all,peak];
 end 
 
 %%
+Peaks_all
 % csvwrite('C:\Users\hssharadga\Desktop\Spring 2021\One year\Forecast Results\peak_all_daily_based__common_day_of_week.csv',Peaks_all)
 
 
