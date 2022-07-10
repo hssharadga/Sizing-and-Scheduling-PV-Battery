@@ -4,7 +4,7 @@
 Authors: Hussein Sharadga
    
    
-**Note**: Should you face an issue running the codes, please feel free to drop a LinkedIn message (Hussein Sharadga).
+**Note**: Should you face an issue running the codes, please feel free to drop a LinkedIn message (https://www.linkedin.com/in/hussein-sharadga/).
     
    
 You need to install and import CVX library to your MATLAB (http://cvxr.com/), obtain the licenses (http://cvxr.com/cvx/licensing/). To pair MOSEK solver to CVX and obtain the licenses for MOSEK solver: http://cvxr.com/cvx/doc/mosek.html.
