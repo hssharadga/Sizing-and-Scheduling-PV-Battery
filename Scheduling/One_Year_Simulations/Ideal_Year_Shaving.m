@@ -50,6 +50,7 @@ schedule=[schedule,u]; % Storing the battery schedules (360 schedules as we have
 end
 
 % %% Save the results
+Monthly_ideal_Peak
 % csvwrite('C:\Users\hssharadga\Desktop\Spring 2021\One year\Forecast Results\Monthly_ideal_Peak.csv',Monthly_ideal_Peak)
 % csvwrite('C:\Users\hssharadga\Desktop\Spring 2021\One year\Forecast Results\schedule2.csv',schedule)
 
