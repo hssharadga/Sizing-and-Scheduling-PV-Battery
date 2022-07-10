@@ -35,7 +35,7 @@ day_num=0;
 Peak_monthly=zeros(1,12);
 day_of_week=0;
 peak_monthly_all=[];
-Peaks_all=[];
+Peaks_all=[];          % Daily Peak (360 Peaks in a year)
 
 %% Looping
 for i=1:360
@@ -172,6 +172,7 @@ for i=1:360
 end 
     
 % %% Saving
+Peaks_all
 % csvwrite('C:\Users\hssharadga\Desktop\Spring 2021\One year\Forecast Results\Peaks_all3.csv',Peaks_all)
 
 
