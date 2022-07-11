@@ -37,8 +37,8 @@ Day_number_correction;          % Loading the load and PV profiles  & day number
 % SDDP_6.jl  15-mins realization, receding & 15-mins-based scheduling, receding forecasting
 
 %% Compare with the ideal case
-% Ideal                        % shaving the hourly peak
-% Ideal_15_mins_Peak_Shaving   % shaving the 15-mins peak
+Ideal                        % shaving the hourly peak
+Ideal_15_mins_Peak_Shaving   % shaving the 15-mins peak
 
 %% Results: Shaving the 15-mins peak with 6 different techniques
 
