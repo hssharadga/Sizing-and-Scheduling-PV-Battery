@@ -43,7 +43,7 @@ D)  Chapter 5 ....... (DOI: https://doi.org/10.1016/j.renene.2019.12.131)
      3. We use the following SDDP library: https://github.com/odow/SDDP.jl 
 
 - Scheduling Folder>> One_Day_Examples_SDDP_Julia Folder:  SDDP.jl has the full notation so please start with it.
-- Forecasting is hourly based. ARIMA model is used for forecasting both the PV and electrical load.
+- Forecasting is hourly based. ARIMA model is used for forecasting both the PV and electrical load. ARIMA was found to be **stable** to predict the PV generation with the adopted degrees of integration with MATLAB R2022a, but it is **not stable** with MATLAB R2020b. So you might need to change the degree of integration.
 - The sizing work can be applied for any facility. The schduling work here is for school where the control/forecasting horizon is between 4 am and 6 pm. The battery might be charged during this interval (the optimization algorithm will decide about that). The battery is set up on the charging mode after 6 pm till 4 am. The battery will be fully charged at 4 am. The battery is charged slowly to make sure the peak will not occur at the night (the peak in the night is not monteried. However, the school has low load after 6 pm).
 
 # Info: Algorithm Selection
