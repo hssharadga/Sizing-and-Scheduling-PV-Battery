@@ -1,7 +1,7 @@
 # Sizing and Scheduling Solar Photovoltaic Battery System For Demand Peak-shaving (15-minute monthly demand peak)
      
      
-Authors: Hussein Sharadga
+Authors: Hussein Sharadga, Dr. Bryan Rasmussen
    
    
 **Note**: Should you face an issue running the codes, please feel free to drop a LinkedIn message (https://www.linkedin.com/in/hussein-sharadga/).
