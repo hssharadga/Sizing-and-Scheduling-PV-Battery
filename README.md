@@ -10,7 +10,7 @@ Authors: Dr. Hussein Sharadga, Dr. Bryan Rasmussen
 You need to install and import CVX library to your MATLAB (http://cvxr.com/), obtain the licenses (http://cvxr.com/cvx/licensing/). To pair MOSEK solver to CVX and obtain the licenses for MOSEK solver: http://cvxr.com/cvx/doc/mosek.html.
    
 Please support my reserch by **cite my PhD dissertation**:
-**https://scholar.google.com/citations?view_op=view_citation&hl=en&user=F3R-63QAAAAJ&sortby=pubdate&citation_for_view=F3R-63QAAAAJ:W7OEmFMy1HYC**   
+**https://scholar.google.com/citations?view_op=view_citation&hl=en&user=F3R-63QAAAAJ&sortby=pubdate&citation_for_view=F3R-63QAAAAJ:UebtZRa9Y70C**   
 
 
 
