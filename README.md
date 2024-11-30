@@ -15,8 +15,8 @@ Please support my reserch by **cite my PhD dissertation**:
 
 
 
-A)  Sizing paper.............(Chapter 3): Sizing PV-Battery Grid-Connected System Utilizing the Convex Optimization Algorithm for Peak Shaving  
-B)  Scheduling paper.........(Chapter 4): Demand Peak Shaving Using PV-Battery System Under PV Power and Load Prediction-Uncertainty  
+A)  Sizing .............(Chapter 3): Sizing PV-Battery Grid-Connected System Utilizing the Convex Optimization Algorithm for Peak Shaving  
+B)  Scheduling .........(Chapter 4): Demand Peak Shaving Using PV-Battery System Under PV Power and Load Prediction-Uncertainty  
 C)  Algorithm Selection......(Chapter 6): Comparison of Forecasting Methods for Peak Shaving Control of Site Electrical Demand  
 D)  Chapter 5 ....... (DOI: https://doi.org/10.1016/j.renene.2019.12.131)
 
